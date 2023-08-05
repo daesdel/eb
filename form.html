@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formulario</title>
+</head>
+<body>
+
+<h1>Formulario</h1>
+
+<form action="mailto:destinatario@outlook.com" method="post">
+
+<input type="text" name="nombre" placeholder="Nombre">
+<input type="text" name="apellido" placeholder="Apellido">
+<select name="vendor">
+<option value="ERICSSON">Ericsson</option>
+<option value="HUAWEI">Huawei</option>
+</select>
+
+<div id="escenarios"></div>
+
+<input type="submit" value="Enviar">
+
+</form>
+
+<script>
+function showEscenarios() {
+  var vendor = document.querySelector('select[name="vendor"]').value;
+  if (vendor === 'ERICSSON') {
+    document.getElementById('escenarios').innerHTML = `
+      <select name="escenarios">
+        <option value="SI">SI</option>
+        <option value="NO">NO</option>
+      </select>
+    `;
+  } else if (vendor === 'HUAWEI') {
+    document.getElementById('escenarios').innerHTML = `
+      <select name="escenarios">
+        <option value="TX1">TX1</option>
+        <option value="TX2">TX2</option>
+        <option value="TX3">TX3</option>
+        <option value="TX4">TX4</option>
+        <option value="TX5">TX5</option>
+        <option value="TX6">TX6</option>
+        <option value="TX7">TX7</option>
+        <option value="TX8">TX8</option>
+        <option value="TX9">TX9</option>
+        <option value="TX10">TX10</option>
+      </select>
+    `;
+  } else {
+    document.getElementById('escenarios').innerHTML = '';
+  }
+}
+
+document.querySelector('select[name="vendor"]').addEventListener('change', showEscenarios);
+</script>
+
+</body>
+</html>
