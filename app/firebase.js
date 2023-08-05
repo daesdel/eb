@@ -7,7 +7,7 @@
   
     // Your web app's Firebase configuration
     const firebaseConfig = {
-      apiKey: ${{ secrets.APIKEY }},
+      apiKey: process.env.REACT_APP_APIKEY,
       authDomain: "todo-b5800.firebaseapp.com",
       projectId: "todo-b5800",
       storageBucket: "todo-b5800.appspot.com",
