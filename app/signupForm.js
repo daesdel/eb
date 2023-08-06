@@ -1,5 +1,6 @@
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 import { auth } from './firebase.js'
+import { showMessage } from './showMessage.js'
 
 const signupForm = document.querySelector('#signup-form')
 signupForm.addEventListener('submit', async (e) => {
@@ -14,34 +15,19 @@ signupForm.addEventListener('submit', async (e) => {
         const modal = bootstrap.Modal.getInstance(signupModal)
         modal.hide()
 
-        // Toastity
-        Toastify({
-            text: "Registro correcto",
-            duration: 5000,
-            destination: "https://github.com/apvarun/toastify-js",
-            newWindow: true,
-            close: true,
-            gravity: "bottom", // `top` or `bottom`
-            position: "right", // `left`, `center` or `right`
-            stopOnFocus: true, // Prevents dismissing of toast on hover
-            style: {
-              background: 'green', //"linear-gradient(to right, #00b09b, #96c93d)",
-            },
-            onClick: function(){} // Callback after click
-          }).showToast();
-
-
+        showMessage ("registro completo " + userCredentials.user.email)
 
     } catch (error) {
         console.log (error.code)
 
-        if (error.code === 'auth/email-already-in-use') {
-            alert ('El usuario ya está registrado')
-        } if (error.code === 'auth/invalid-email') {
-            alert ('mail incorrecto')
-          } else if (error.code === 'auth/weak-password') {
-            alert ('Password demasiado corto')
-            }
+        // if (error.code === 'auth/email-already-in-use') {
+        //     alert ('El usuario ya está registrado')
+        // } if (error.code === 'auth/invalid-email') {
+        //     alert ('mail incorrecto')
+        //   } else if (error.code === 'auth/weak-password') {
+        //     alert ('Password demasiado corto')
+        //     }
+        showMessage (error.code,"error")
         
 
 
