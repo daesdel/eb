@@ -17,6 +17,7 @@ signupForm.addEventListener('submit', async (e) => {
 
         showMessage ("registro completo " + userCredentials.user.email)
 
+        
     } catch (error) {
         console.log (error.code)
         // if (error.code === 'auth/email-already-in-use') {

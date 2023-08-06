@@ -17,6 +17,7 @@ signInForm.addEventListener('submit', async e => {
 
         showMessage ("Logueado " + credentials.user.email)
 
+        
     } catch (error) {
         console.log (error.code)
         // if (error.code === 'auth/email-already-in-use') {
