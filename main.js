@@ -5,10 +5,17 @@ import { loginCheck } from "./app/loginCheck.js";
 import './app/signupForm.js'
 import './app/signinForm.js'
 import './app/logout.js'
+
+const tituloApp = document.querySelector('#titulo')
+
 onAuthStateChanged (auth, async (user) => {
+  loginCheck(user)
   if (user) {
-    loginCheck(user)
+    tituloApp.innerHTML = user.email
+    console.log(tituloApp.innerHTML)
+    
   } else{
-    loginCheck(user)
+    
   }
+
 })
