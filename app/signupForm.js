@@ -19,7 +19,6 @@ signupForm.addEventListener('submit', async (e) => {
 
     } catch (error) {
         console.log (error.code)
-
         // if (error.code === 'auth/email-already-in-use') {
         //     alert ('El usuario ya está registrado')
         // } if (error.code === 'auth/invalid-email') {
