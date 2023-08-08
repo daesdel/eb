@@ -10,5 +10,32 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./main.css">
-    
+    <!-- lanzar fomulario -->
+    <script src="./app/entregaActa.js" defer></script>
 </head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+          <!--<ul id="titulo" class="logged-in"></ul>-->
+          <a id="titulo2" class="navbar-brand logged-in" href="index.html">Volver</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" id="button-acta" class="btn btn-primary">Entrega acta</button>
+            <button type="button" id="button-plano" class="btn btn-primary">Entrega plano</button>
+          </div>
+        </div>
+    </div>
+    <form id="form-acta">
+        <input type="text" name="nombre" placeholder="Tu nombre">
+        <input type="text" name="apellido" placeholder="Tu apellido">
+        <input type="submit" value="Enviar">
+      </form>
+
+
+
