@@ -1,4 +1,4 @@
-const button = document.getElementById("button-acta");
+const button = document.getElementById("button-actaE");
 button.addEventListener('click', async () => {
     await showForm()
     console.log ('FORMULARIO MOSTRADO')
@@ -6,11 +6,11 @@ button.addEventListener('click', async () => {
 })
 function showForm() {
     // Mostrar el formulario
-    document.getElementById("form-acta").style.display = "block"
+    document.getElementById("form-actaE").style.display = "block"
     console.log ('FORMULARIO ACTIVO')
 }
 
-const form = document.querySelector('#form-acta')
+const form = document.querySelector('#form-actaE')
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 

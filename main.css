@@ -10,7 +10,10 @@ body {
       .col-md-12 {
         margin-top: 20px;
       }
-      #form-acta {
+      #form-actaE {
+        display: none;
+      }
+      #form-actaH {
         display: none;
       }
 }

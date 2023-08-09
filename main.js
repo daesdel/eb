@@ -6,13 +6,13 @@ import './app/signupForm.js'
 import './app/signinForm.js'
 import './app/logout.js'
 
-const tituloApp = document.querySelector('#titulo')
+const usuarioLogeado = document.querySelector('#usuarioLogeado')
 
 onAuthStateChanged (auth, async (user) => {
   loginCheck(user)
   if (user) {
-    tituloApp.innerHTML = user.email
-    console.log(tituloApp.innerHTML)
+    usuarioLogeado.innerHTML = user.email
+    console.log(usuarioLogeado.innerHTML)
     
   } else{
     

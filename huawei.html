@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firebase dos</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- Troastity -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./main.css">
+    <!-- lanzar fomulario -->
+    <script src="./app/entregaActaH.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+          <!--<ul id="titulo" class="logged-in"></ul>-->
+          <a id="titulo2" class="navbar-brand logged-in" href="index.html">Volver</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" id="button-actaH" class="btn btn-primary">Entrega acta</button>
+            <button type="button" id="button-planoH" class="btn btn-primary">Entrega plano</button>
+          </div>
+        </div>
+    </div>
+    <form id="form-actaH">
+        <input type="text" name="nombre" placeholder="Tu nombre">
+        <input type="text" name="apellido" placeholder="Tu apellido">
+        <input type="submit" value="Enviar">
+      </form>
+
+
+
