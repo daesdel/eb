@@ -1,4 +1,4 @@
-import { showMessage } from 'showMessage.js';
+import { showMessage } from './showMessage.js';
 
 
 const button = document.getElementById("button-actaE");
