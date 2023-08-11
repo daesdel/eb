@@ -1,3 +1,5 @@
+import { showMessage } from './showMessage.js'
+
 const button = document.getElementById("button-actaE");
 button.addEventListener('click', async () => {
     await showForm();
@@ -21,10 +23,10 @@ form.addEventListener("submit", (event) => {
     console.log("Enviado:", escenario, "  ", IRJira);
 
     // Mostrar el cuadro emergente "Formulario enviado"
-    alert("Formulario enviado");
+    showMessage ("Acta enviada " + IRJira)
 
     // Esperar 2 segundos (2000 milisegundos) antes de recargar la página
-    setTimeout(() => {
-        location.reload();
-    }, 2000);
+    //setTimeout(() => {
+    //    location.reload();
+    //}, 2000);
 });
