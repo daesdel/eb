@@ -15,9 +15,9 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   // Obtener los valores de los campos de texto
-  const escenarioTxE = form['escenarioTxE'].value
+  const escenario = form['escenario'].value
   const IRJira = form['IRJira'].value
   // Enviar los valores de los campos de texto a la consola
-  console.log("Enviado:", escenarioTxE, "  ", IRJira);
+  console.log("Enviado:", escenario, "  ", IRJira);
   location.reload();
 });

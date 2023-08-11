@@ -34,12 +34,12 @@
     <form id="form-actaE">
         <!-- Seleccionable configuracion Tx E// la selección irá con id "escenario"-->
         <div>
-            <label for="escenarioTxE">Escoge Configuración:  </label>
-            <select id="escenarioTxE" name="escenarioTxE" required>
+            <label for="escenario">Escoge Configuración:  </label>
+            <select id="escenario" name="escenario" required>
                 <option value="" disabled selected>Selecciona</option>
               <!-- Generar opciones para cada escenario -->
                 <script>
-                    const selectEscenario = document.getElementById('escenarioTxE');
+                    const selectEscenario = document.getElementById('escenario');
                         for (let i = 1; i <= 50; i++) {
                         const option = document.createElement('option');
                         option.value = `Tx${String(i).padStart(2, '0')}`;
