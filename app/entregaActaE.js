@@ -23,7 +23,7 @@ form.addEventListener("submit", (event) => {
     console.log("Enviado:", escenario, "  ", IRJira);
 
     // Mostrar el cuadro emergente "Formulario enviado"
-    showMessage ("Acta enviada " + IRJira)
+    showMessage ("Acta enviada " + IRJira);
 
     // Esperar 2 segundos (2000 milisegundos) antes de recargar la página
     //setTimeout(() => {
