@@ -33,12 +33,26 @@
     </div>
     <form id="form-actaE">
       <div>
-        <span class="button-label">Escoge escenario: </span>
-        <button type="button" name="ETxE" onclick="window.location.href='txE.html'">Selecc. esc. Tx</button>
-      </div>  
-        <input type="text" name="apellido" placeholder="Tu apellido">
-        <input type="submit" value="Enviar">
-      </form>
+          <label for="escenario">Escoge escenario: </label>
+          <select id="escenario" name="escenario" required>
+              <option value="" disabled selected>Selecciona un escenario</option>
+              <!-- Generar opciones para cada escenario -->
+              <script>
+                  const selectEscenario = document.getElementById('escenario');
+                  for (let i = 1; i <= 50; i++) {
+                      const option = document.createElement('option');
+                      option.value = `Tx${String(i).padStart(2, '0')}`;
+                      option.textContent = `Tx${String(i).padStart(2, '0')}`;
+                      selectEscenario.appendChild(option);
+                  }
+              </script>
+          </select>
+          <button type="button" onclick="window.open('txE.html', '_blank')">Ayuda</button>
+      </div>
+      <input type="text" name="apellido" placeholder="Tu apellido">
+      <input type="submit" value="Enviar">
+  </form>
+  
 
 
 
