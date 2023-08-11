@@ -32,25 +32,30 @@
         </div>
     </div>
     <form id="form-actaE">
-      <div>
-          <label for="escenario">Escoge escenario: </label>
-          <select id="escenario" name="escenario" required>
-              <option value="" disabled selected>Selecciona un escenario</option>
+        <!-- Seleccionable configuracion Tx E// la selección irá con id "escenario"-->
+        <div>
+            <label for="escenario">Escoge Configuración:  </label>
+            <select id="escenarioTxE" name="escenarioTxE" required>
+                <option value="" disabled selected>Selecciona</option>
               <!-- Generar opciones para cada escenario -->
-              <script>
-                  const selectEscenario = document.getElementById('escenario');
-                  for (let i = 1; i <= 50; i++) {
-                      const option = document.createElement('option');
-                      option.value = `Tx${String(i).padStart(2, '0')}`;
-                      option.textContent = `Tx${String(i).padStart(2, '0')}`;
-                      selectEscenario.appendChild(option);
-                  }
-              </script>
-          </select>
-          <button type="button" onclick="window.open('txE.html', '_blank')">Ayuda</button>
-      </div>
-      <input type="text" name="apellido" placeholder="Tu apellido">
-      <input type="submit" value="Enviar">
+                <script>
+                    const selectEscenario = document.getElementById('escenario');
+                        for (let i = 1; i <= 50; i++) {
+                        const option = document.createElement('option');
+                        option.value = `Tx${String(i).padStart(2, '0')}`;
+                        option.textContent = `Tx${String(i).padStart(2, '0')}`;
+                        selectEscenario.appendChild(option);
+                        }
+                </script>
+            </select>
+            <button type="button" onclick="window.open('txE.html', '_blank')">Ayuda</button>
+        </div>
+         <!-- Segundo campo formulario -->
+            <label for="IRJira">código JIRA:  </label>
+            <input type="text" name="IRJira" placeholder="IRJIRA">
+        <div>
+            <input type="submit" value="Enviar">
+        </div>
   </form>
   
 
