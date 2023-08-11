@@ -55,12 +55,10 @@
                 img.onload = () => {
                     const imageBox = document.createElement('div');
                     imageBox.className = 'image-box';
-                    const imageLink = document.createElement('a');
-                    imageLink.href = 'ericsson.html'; // Cambiar la ruta según tu necesidad
                     const image = document.createElement('img');
                     image.src = imagePath;
                     image.alt = `Imagen ${i}`;
-                    imageLink.appendChild(image);
+                    imageBox.appendChild(image);
 
                     // Crear etiqueta h1 para el nombre del archivo sin extensión en mayúsculas
                     const fileName = imagePath.split('/').pop().split('.')[0];
@@ -69,14 +67,7 @@
                     h1.className = 'image-label';
                     imageBox.appendChild(h1);
                     
-                    imageBox.appendChild(imageLink);
                     document.querySelector('.image-container').appendChild(imageBox);
-
-                    // Cambiar el texto del botón al hacer clic en una imagen
-                    image.addEventListener('click', () => {
-                        const boton = document.querySelector('.button-container button');
-                        boton.innerText = fileName.toUpperCase();
-                    });
                 };
 
                 img.onerror = () => {
@@ -84,9 +75,6 @@
                 };
             }
         </script>
-    </div>
-    <div class="button-container">
-        <button type="button" name="nombre">Selecc. Esc. Tx</button>
     </div>
 </body>
 </html>
