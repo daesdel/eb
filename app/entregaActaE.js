@@ -28,6 +28,6 @@ form.addEventListener("submit", (event) => {
 
     // Esperar 2 segundos (2000 milisegundos) antes de recargar la página
     //setTimeout(() => {
-    //    location.reload();
+    location.reload();
     //}, 2000);
 });
