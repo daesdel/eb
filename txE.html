@@ -22,6 +22,7 @@
 
         .image-box {
             display: flex;
+            flex-direction: column; /* Cambio aquí para que el texto esté debajo de la imagen */
             justify-content: center;
             align-items: center;
             background-color: black;
@@ -29,7 +30,7 @@
             overflow: hidden;
             width: 100%;
             height: 100%;
-            position: relative; /* Añadir posición relativa */
+            position: relative;
         }
 
         .image-box img {
@@ -40,13 +41,10 @@
         }
 
         .image-label {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
+            color: red; /* Cambio el color del texto a rojo */
             font-size: 20px;
             text-align: center;
+            margin-top: 10px; /* Agrego margen arriba para separar el texto de la imagen */
         }
     </style>
 </head>
@@ -85,3 +83,4 @@
     </div>
 </body>
 </html>
+
