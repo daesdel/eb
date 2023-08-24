@@ -32,34 +32,37 @@
         </div>
     </div>
     <form id="form-actaE">
-        <!-- Seleccionable configuracion Tx E// la selección irá con id "escenario"-->
-        <div>
-            <label for="escenario">Escoge Configuración:  </label>
-            <select id="escenario" name="escenario" required>
-                <option value="" disabled selected>Selecciona</option>
-              <!-- Generar opciones para cada escenario -->
-                <script>
-                    const selectEscenario = document.getElementById('escenario');
-                        for (let i = 1; i <= 50; i++) {
-                        const option = document.createElement('option');
-                        option.value = `Tx${String(i).padStart(2, '0')}`;
-                        option.textContent = `Tx${String(i).padStart(2, '0')}`;
-                        selectEscenario.appendChild(option);
-                        }
-                </script>
-            </select>
-            <button type="button" onclick="window.open('txE.html', '_blank')">Ayuda</button>
-        </div>
-         <!-- Segundo campo formulario y otros -->
-            <label for="IRJira">código JIRA:  </label>
-            <input type="text" name="IRJira" placeholder="IRJIRA">
-            <label for="CodSite">código SITE:  </label>
-            <input type="text" name="CodSite" placeholder="CodSite">
-        <!-- boton enviar formulario -->
-        <div>
-            <input type="submit" value="Enviar acta">
-        </div>
-  </form>
+      <div style="margin-bottom: 20px;">
+        <label for="escenario">Escoge Configuración:</label>
+        <select id="escenario" name="escenario" required>
+          <option value="" disabled selected>Selecciona</option>
+          <!-- Generar opciones para cada escenario -->
+          <script>
+            const selectEscenario = document.getElementById('escenario');
+            for (let i = 1; i <= 50; i++) {
+              const option = document.createElement('option');
+              option.value = `Tx${String(i).padStart(2, '0')}`;
+              option.textContent = `Tx${String(i).padStart(2, '0')}`;
+              selectEscenario.appendChild(option);
+            }
+          </script>
+        </select>
+        <button type="button" onclick="window.open('txE.html', '_blank')">Ayuda</button>
+      </div>
+      <div style="margin-bottom: 20px;">
+        <label for="IRJira">Código JIRA:</label>
+        <input type="text" name="IRJira" placeholder="IRJIRA">
+      </div>
+      <div style="margin-bottom: 20px;">
+        <label for="CodSite">Código SITE:</label>
+        <input type="text" name="CodSite" placeholder="CodSite">
+      </div>
+      <div style="margin-top: 60px; text-align: center;">
+        <input type="submit" value="Enviar acta">
+      </div>
+    </form>
+    
+    
   <!-- Bootstrap -->  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Toastity -->
