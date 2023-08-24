@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETxE</title>
     <style>
         body {
             margin: 0;
@@ -25,6 +22,7 @@
 
         .image-box {
             display: flex;
+            flex-direction: column; /* Cambio aquí para que el texto esté debajo de la imagen */
             justify-content: center;
             align-items: center;
             background-color: black;
@@ -32,6 +30,7 @@
             overflow: hidden;
             width: 100%;
             height: 100%;
+            position: relative;
         }
 
         .image-box img {
@@ -39,7 +38,13 @@
             max-height: 100%;
             width: auto;
             height: auto;
-            cursor: pointer; /* Cambia el cursor al pasar por encima de las imágenes */
+        }
+
+        .image-label {
+            color: red; /* Cambio el color del texto a rojo */
+            font-size: 20px;
+            text-align: center;
+            margin-top: 10px; /* Agrego margen arriba para separar el texto de la imagen */
         }
     </style>
 </head>
@@ -55,20 +60,19 @@
                 img.onload = () => {
                     const imageBox = document.createElement('div');
                     imageBox.className = 'image-box';
-                    const imageLink = document.createElement('a');
-                    imageLink.href = 'ericsson.html'; // Cambiar la ruta según tu necesidad
                     const image = document.createElement('img');
                     image.src = imagePath;
                     image.alt = `Imagen ${i}`;
-                    imageLink.appendChild(image);
-                    imageBox.appendChild(imageLink);
-                    document.querySelector('.image-container').appendChild(imageBox);
+                    imageBox.appendChild(image);
 
-                    // Cambiar el texto del botón al hacer clic en una imagen
-                    image.addEventListener('click', () => {
-                        const boton = document.querySelector('.button-container button');
-                        boton.innerText = `Imagen ${i}`;
-                    });
+                    // Crear etiqueta h1 para el nombre del archivo sin extensión en mayúsculas
+                    const fileName = imagePath.split('/').pop().split('.')[0];
+                    const h1 = document.createElement('h1');
+                    h1.textContent = fileName.toUpperCase();
+                    h1.className = 'image-label';
+                    imageBox.appendChild(h1);
+                    
+                    document.querySelector('.image-container').appendChild(imageBox);
                 };
 
                 img.onerror = () => {
@@ -76,9 +80,6 @@
                 };
             }
         </script>
-    </div>
-    <div class="button-container">
-        <button type="button" name="nombre">Selecc. Esc. Tx</button>
     </div>
 </body>
 </html>

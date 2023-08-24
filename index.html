@@ -34,8 +34,16 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
+              <!-- CON ESTO PRETENDO QUE EL MAIL DEL USUARIO APAREZCA A LA DERECHA DE LA PANTALLA AL LOGUEARSE -->
+              <li id="usuarioLogeado" class="nav-item logged-in"></li>
+              <!-- COMENTO ESTO POR QUE NO SÉ SI AL HACERLO CONSEGUIRÉ QUE SE VEA EL MAIL DEL USUARIO PERO QUE NO SEA "PULSABLE" QUE SEA TEXTO 
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              -->            
               <li class="nav-item logged-out">
                 <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Entrar</a>
               </li>
