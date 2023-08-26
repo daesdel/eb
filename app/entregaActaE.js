@@ -12,6 +12,9 @@ function getCookie(name) {
 // Obtener el correo electrónico almacenado en la cookie
 const loggedInUserEmail = getCookie('loggedInUserEmail');
 
+
+
+
 const button = document.getElementById("button-actaE");
 button.addEventListener('click', async () => {
     await showForm();
