@@ -2,6 +2,7 @@ import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/1
 import { auth } from './firebase.js'
 import { showMessage } from './showMessage.js'
 
+
 const signInForm = document.querySelector('#login-form')
 signInForm.addEventListener('submit', async e => {
     e.preventDefault()
@@ -16,8 +17,10 @@ signInForm.addEventListener('submit', async e => {
         modal.hide()
 
         showMessage ("Logueado " + credentials.user.email)
-
         
+        // Guardar el correo electrónico en una cookie
+        document.cookie = `loggedInUserEmail=${email}`;
+            
     } catch (error) {
         console.log (error.code)
         // if (error.code === 'auth/email-already-in-use') {

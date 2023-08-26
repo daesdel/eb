@@ -21,6 +21,6 @@
     export const auth = getAuth (app);
     export const db = getFirestore ()
     
-    export const guardarDocumento = (documento, IRJira, CodSite, escenario) => {
-      addDoc (collection (db, documento), {IRJira, CodSite, escenario});
+    export const guardarDocumento = (coleccion, documento) => {
+      addDoc (collection (db, coleccion), documento);
     }

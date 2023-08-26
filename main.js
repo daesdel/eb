@@ -6,8 +6,8 @@ import './app/signupForm.js'
 import './app/signinForm.js'
 import './app/logout.js'
 
-const usuarioLogeado = document.querySelector('#usuarioLogeado')
-
+const usuarioLogeado = document.querySelector('#usuarioLogeado');
+ 
 onAuthStateChanged (auth, async (user) => {
   loginCheck(user)
   if (user) {
