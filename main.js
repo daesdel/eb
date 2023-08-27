@@ -5,9 +5,13 @@ import { loginCheck } from "./app/loginCheck.js";
 import './app/signupForm.js'
 import './app/signinForm.js'
 import './app/logout.js'
+import { showMessage } from './app/showMessage.js';
 
 const usuarioLogeado = document.querySelector('#usuarioLogeado');
- 
+
+// Hacer la función showMessage global
+window.showMessage = showMessage;
+
 onAuthStateChanged (auth, async (user) => {
   loginCheck(user)
   if (user) {

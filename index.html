@@ -13,8 +13,6 @@
     <!-- Main APP -->
     <script src="./main.js" type="module"></script>
     <script src="./app/signinForm.js" type="module"></script>
-    
-
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -36,36 +34,19 @@
               var IRJiraValue = document.getElementById('IRJira').value;
               if (IRJiraValue !== '') {
                 window.location.href = target;
+                // Guardar el codigo IR JIRA en una cookie
+                document.cookie = `IRJira=${IRJiraValue}`;
               } else {
-                alert('Debes rellenar el campo IRJIRA antes de continuar.');
+                showMessage ("Debes rellenar el campo IRJIRA antes de continuar.", "error");
               }
             }
+         
           </script>
-          
-          <style>
-            /* Agrega estilos CSS según tus preferencias */
-            /* Por ejemplo, para alinear los botones horizontalmente */
-            #IR-form {
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-            }
-          
-            #IRJira, #Acta, #Plano {
-              margin: 5px;
-            }
-          </style>
-          
 
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <!-- CON ESTO PRETENDO QUE EL MAIL DEL USUARIO APAREZCA A LA DERECHA DE LA PANTALLA AL LOGUEARSE -->
               <li id="usuarioLogeado" class="nav-item logged-in"></li>
-              <!-- COMENTO ESTO POR QUE NO SÉ SI AL HACERLO CONSEGUIRÉ QUE SE VEA EL MAIL DEL USUARIO PERO QUE NO SEA "PULSABLE" QUE SEA TEXTO 
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-              </button>
-              -->            
               <li class="nav-item logged-out">
                 <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Entrar</a>
               </li>
@@ -79,10 +60,7 @@
           </div>
         </div>
       </nav>
-   <!--   <script type="text/javascript" src="https://widgets.futbolenlatv.com/js/js?w=300&h=360&color=f83300&culture=es-ES"></script>
-      <script type="text/javascript" src="https://widgets.futbolenlatv.com/js/js?w=300&h=360&color=f83300&culture=es-ES&deporte=baloncesto"></script>
-      <script type="text/javascript" src="https://widgets.futbolenlatv.com/js/js?w=300&h=360&color=f83300&culture=es-ES&deporte=atletismo"></script>
-   -->
+
    <!-- DIAGRAMA DE FLUJO -->
    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=5,IE=9" ><![endif]-->
    <div class="container"> 

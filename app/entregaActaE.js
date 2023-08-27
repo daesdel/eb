@@ -11,7 +11,8 @@ function getCookie(name) {
 
 // Obtener el correo electrónico almacenado en la cookie
 const loggedInUserEmail = getCookie('loggedInUserEmail');
-
+// Obtener IRJIRA alacenado en la coockie
+const IRJira = getCookie('IRJira');
 
 
 
@@ -37,7 +38,7 @@ form.addEventListener("submit", (event) => {
     
     const documento = {
         escenario: form['escenario'].value,
-        //IRJira: form['IRJira'].value,
+        IRJira: IRJira,
         CodSite: form['CodSite'].value
       };
     //const escenario = form['escenario'].value;
@@ -47,7 +48,7 @@ form.addEventListener("submit", (event) => {
     guardarDocumento (loggedInUserEmail,documento);
 
     // Enviar los valores de los campos de texto a la consola
-    //console.log("Enviado: ", IRJira);
+    console.log("Enviado: ", IRJira);
 
     // Mostrar el cuadro emergente 
     showMessage ("Acta enviada " + IRJira, "success");
