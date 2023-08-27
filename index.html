@@ -19,23 +19,44 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container">
-          <!--
-          <ul id="titulo" class="logged-in"></ul>
-          <a id="titulo" class="navbar-brand logged-in" href="ericsson.html"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          -->
-
-          <a id="Ericsson" class="navbar-brand logged-in" href="ericsson.html">ENTREGA DE ACTA     </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a id="Huawei" class="navbar-brand logged-in" href="huawei.html">     ENTREGA DE PLANO</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <form id="IR-form" class="navbar-brand logged-in">
+            <div style="margin-bottom: 0px;">
+              <label for="IRJira">Código JIRA:</label>
+              <input type="text" id="IRJira" name="IRJira" placeholder="IRJIRA" required>
+            </div>
           
+            <div style="display: flex; align-items: center;">
+              <button id="Acta" class="btn btn-primary logged-in" type="button" onclick="submitForm('acta.html')">ENTREGA DE ACTA</button>
+              <button id="Plano" class="btn btn-primary logged-in" type="button" onclick="submitForm('plano.html')">ENTREGA DE PLANO</button>
+            </div>
+          </form>
+          
+          <script>
+            function submitForm(target) {
+              var IRJiraValue = document.getElementById('IRJira').value;
+              if (IRJiraValue !== '') {
+                window.location.href = target;
+              } else {
+                alert('Debes rellenar el campo IRJIRA antes de continuar.');
+              }
+            }
+          </script>
+          
+          <style>
+            /* Agrega estilos CSS según tus preferencias */
+            /* Por ejemplo, para alinear los botones horizontalmente */
+            #IR-form {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+            }
+          
+            #IRJira, #Acta, #Plano {
+              margin: 5px;
+            }
+          </style>
+          
+
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <!-- CON ESTO PRETENDO QUE EL MAIL DEL USUARIO APAREZCA A LA DERECHA DE LA PANTALLA AL LOGUEARSE -->

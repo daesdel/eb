@@ -15,7 +15,7 @@ const loggedInUserEmail = getCookie('loggedInUserEmail');
 
 
 
-const button = document.getElementById("button-actaE");
+const button = document.getElementById("button-VendorE");
 button.addEventListener('click', async () => {
     await showForm();
     console.log('FORMULARIO MOSTRADO');
@@ -37,17 +37,17 @@ form.addEventListener("submit", (event) => {
     
     const documento = {
         escenario: form['escenario'].value,
-        IRJira: form['IRJira'].value,
+        //IRJira: form['IRJira'].value,
         CodSite: form['CodSite'].value
       };
     //const escenario = form['escenario'].value;
-    const IRJira = form['IRJira'].value;
+    //const IRJira = form['IRJira'].value;
     //const CodSite = form['CodSite'].value;
 
     guardarDocumento (loggedInUserEmail,documento);
 
     // Enviar los valores de los campos de texto a la consola
-    console.log("Enviado: ", IRJira);
+    //console.log("Enviado: ", IRJira);
 
     // Mostrar el cuadro emergente 
     showMessage ("Acta enviada " + IRJira, "success");

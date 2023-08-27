@@ -1,4 +1,4 @@
-const button = document.getElementById("button-actaE");
+const button = document.getElementById("button-VendorE");
 button.addEventListener('click', async () => {
     await showForm()
     console.log ('FORMULARIO MOSTRADO')
