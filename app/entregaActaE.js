@@ -1,6 +1,7 @@
 import { showMessage } from './showMessage.js';
 import { guardarDocumento } from './firebase.js';
 
+
 function getCookie(name) {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);

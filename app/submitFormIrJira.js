@@ -1,4 +1,4 @@
-function submitFormIrJira() {
+function submitFormIrJira(target) {
     var IRJiraValue = document.getElementById('IRJira').value;
     // Obtener el correo electrónico almacenado en la cookie
     const loggedInUserEmail = getCookie('loggedInUserEmail');
