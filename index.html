@@ -13,8 +13,10 @@
     <!-- Main APP -->
     <script src="./main.js" type="module"></script>
     <script src="./app/signinForm.js" type="module"></script>
+    <script src="./app/submitFormIrJira.js" type="module"></script>
 </head>
 <body>
+  
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container">
           <form id="IR-form" class="navbar-brand logged-in">
@@ -24,23 +26,13 @@
             </div>
           
             <div style="display: flex; align-items: center;">
-              <button id="Acta" class="btn btn-primary logged-in" type="button" onclick="submitForm('acta.html')">ENTREGA DE ACTA</button>
-              <button id="Plano" class="btn btn-primary logged-in" type="button" onclick="submitForm('plano.html')">ENTREGA DE PLANO</button>
+              <button id="Acta" class="btn btn-primary logged-in" type="button" onclick="submitFormIrJira ('acta.html')">ENTREGA DE ACTA</button>
+              <button id="Plano" class="btn btn-primary logged-in" type="button" onclick="submitFormIrJira ('plano.html')">ENTREGA DE PLANO</button>
             </div>
           </form>
           
-          <script>
-            function submitForm(target) {
-              var IRJiraValue = document.getElementById('IRJira').value;
-              if (IRJiraValue !== '') {
-                window.location.href = target;
-                // Guardar el codigo IR JIRA en una cookie
-                document.cookie = `IRJira=${IRJiraValue}`;
-              } else {
-                showMessage ("Debes rellenar el campo IRJIRA antes de continuar.", "error");
-              }
-            }
-         
+          <script
+          src="./app/submitFormIrJira.js">        
           </script>
 
           <div class="collapse navbar-collapse" id="navbarNav">

@@ -7,10 +7,15 @@ import './app/signinForm.js'
 import './app/logout.js'
 import { showMessage } from './app/showMessage.js';
 
+import { getCookie } from "./app/getCookie.js";
+
 const usuarioLogeado = document.querySelector('#usuarioLogeado');
 
 // Hacer la función showMessage global
 window.showMessage = showMessage;
+
+// Hacer la función getCookie global
+window.getCookie = getCookie;
 
 onAuthStateChanged (auth, async (user) => {
   loginCheck(user)
