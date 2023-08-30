@@ -25,4 +25,17 @@ body {
       #IRJira, #Acta, #Plano {
         margin: 5px;
       }
+
+      /* Centrar el iframe */
+      iframe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Eliminar la barra de desplazamiento */
+      iframe {
+        overflow: hidden;
+      }
+
 }

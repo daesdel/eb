@@ -1,7 +1,7 @@
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
     import { getAuth } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js"
+    import { getFirestore, collection, addDoc, query, where } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js"
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
   
@@ -24,3 +24,10 @@
     export const guardarDocumento = (coleccion, documento) => {
       addDoc (collection (db, coleccion), documento);
     }
+
+    export const obtenerDocumento = (coleccion, id) => {
+      const ingRef = collection (db, id);
+      query (ingRef, where ("IRJira", "==", id));
+    }
+
+

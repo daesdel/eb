@@ -1,5 +1,5 @@
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-import { auth } from './app/firebase.js'
+import { auth, obtenerDocumento } from './app/firebase.js'
 import { loginCheck } from "./app/loginCheck.js";
 
 import './app/signupForm.js'
@@ -16,6 +16,9 @@ window.showMessage = showMessage;
 
 // Hacer la función getCookie global
 window.getCookie = getCookie;
+
+// Hacer la función obtenerDocumento global
+window.obtenerDocumento = obtenerDocumento;
 
 onAuthStateChanged (auth, async (user) => {
   loginCheck(user)
