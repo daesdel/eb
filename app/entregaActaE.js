@@ -15,7 +15,7 @@ const loggedInUserEmail = getCookie('loggedInUserEmail');
 // Obtener IRJIRA alacenado en la coockie
 const IRJira = getCookie('IRJira');
 
-
+console.log(loggedInUserEmail,IRJira);
 
 const button = document.getElementById("button-VendorE");
 button.addEventListener('click', async () => {
@@ -31,6 +31,7 @@ function showForm() {
 }
 
 const form = document.querySelector('#form-actaE');
+
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
