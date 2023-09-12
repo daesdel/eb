@@ -26,11 +26,9 @@
     }
 
     export async function obtenerDocumento (mail,IR) {
-      
       const q = await getDocs (query(collection(db, mail), where('IRJira', '==', IR)));
        //.then(res => console.log (res.docs.map(product => ({id: product.id, ...product.data()}))));
       let resultados = await q.docs.map(product => ({id: product.id, ...product.data()}));
-      
       /*const documentos = await getDocs(collection (db, mail));
       const q = query(documentos, where("IRJira", "==", IR));*/  
       console.log ("erere", resultados);
@@ -42,6 +40,13 @@
         }
       
     }
-      
+
+    
+    
+    
+
+
+
+    
 
 

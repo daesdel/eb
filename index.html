@@ -52,9 +52,31 @@
       </nav>
 
       <!-- Usando un iframe para incrustar el diagrama de flujo desde flow-diagram.html -->
-      <iframe src="flow-diagram.html" frameborder="0" width="45%" height="500" class="d-block mx-auto">
+      <div style="display: flex; justify-content: center;">
+      <iframe id="flowDiagram" class="logged-out" src="flow-diagram.html" frameborder="0" width="45%" height="500">
       </iframe>
-  
+      </div>
+
+      <div class="logged-in">
+        <caption><h3>Lista de elementos</h3></caption>
+      <table class="table table-dark table-bordered align-middle">
+        <thead>
+          <tr>
+            <th scope="col">IR</th>
+            <th scope="col">SR</th>
+            <th scope="col">Tx</th>
+          </tr>
+        </thead>
+        <tbody id="tabla" class="table-group-divider align-bottom">
+          <tr>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
    <!-- Signin Modal -->
 <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
