@@ -36,6 +36,7 @@ onAuthStateChanged (auth, async (user) => {
         <td>${doc.data().IRJira}</td>
         <td>${doc.data().CodSite}</td>
         <td>${doc.data().escenario}</td>
+        <td>${doc.data().Vendor}</td>
       </tr>
       `
     });

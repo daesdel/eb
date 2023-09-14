@@ -3,6 +3,15 @@
 
 //import { obtenerDocumento } from "./firebase";
 
+  const form = document.getElementById("IR-form");
+  const IRJiraInput = document.getElementById("IRJira");
+  // Evitar que el formulario se envíe al presionar Enter en el campo de entrada
+  IRJiraInput.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      showMessage ("Para continuar pulsa el botón. ", "error");              }
+  });
+
 async function submitFormIrJira(target) {
     var IRJiraValue = document.getElementById('IRJira').value;
     // Obtener el correo electrónico almacenado en la cookie

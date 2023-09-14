@@ -39,6 +39,7 @@ form.addEventListener("submit", (event) => {
     //const coleccion = document.querySelector('#usuarioLogeado');
     
     const documento = {
+        Vendor: form['Vendor'].value,
         escenario: form['escenario'].value,
         IRJira: IRJira,
         CodSite: form['CodSite'].value
