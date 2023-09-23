@@ -22,7 +22,7 @@ body {
         align-items: flex-start;
       }
     
-      #IRJira, #Acta, #Plano {
+      #IRJira, #Acta, #Plano, #ENTREGAR, #ORDENAR  {
         margin: 5px;
       }
 

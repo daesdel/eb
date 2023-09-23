@@ -27,6 +27,7 @@ button.addEventListener('click', async () => {
 function showForm() {
     // Mostrar el formulario
     document.getElementById("form-actaE").style.display = "block";
+    document.getElementById("form-actaH").style.display = "none";
     console.log('FORMULARIO ACTIVO');
 }
 
@@ -56,4 +57,8 @@ form.addEventListener("submit", (event) => {
     // Mostrar el cuadro emergente 
     showMessage ("Acta enviada " + IRJira, "success");
     form.reset();
+     // Redirigir a la página index.html después de un breve retraso (por ejemplo, 2 segundos)
+     setTimeout(function() {
+        window.location.href = 'index.html';
+    }, 2000); // 2000 milisegundos = 2 segundos
 });

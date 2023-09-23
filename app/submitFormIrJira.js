@@ -13,7 +13,7 @@
   });
 
 async function submitFormIrJira(target) {
-    var IRJiraValue = document.getElementById('IRJira').value;
+    var IRJiraValue = document.getElementById('IRJira').value.toLowerCase();
     // Obtener el correo electrónico almacenado en la cookie
     const loggedInUserEmail = getCookie('loggedInUserEmail');
     //Buscar documentos con IRJira y usuario
